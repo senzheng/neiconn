@@ -39,7 +39,7 @@ router.post('/postComments', function (req, res, next){
       smtpTransport.sendMail({
         from: "Neiconn <sen.zheng@neiconn.com>", // sender address
         to: " < " + email + ">", // comma separated list of receivers
-        subject: "registration Confirmation", // Subject line
+        subject: "	welcome", // Subject line
         //text: "Hello world ✔",
         html: "<h3>Welcome to Neiconn Family. Congratulations! You are a member of Neiconn Already!</h3>"// plaintext body
         }, function(error, response){
