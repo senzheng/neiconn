@@ -1,5 +1,15 @@
 var express = require('express');
 var router = express.Router();
+var nodemailer = require("nodemailer");
+
+
+var smtpTransport = nodemailer.createTransport({
+   service : "Gmail",
+   auth : {
+       user: "sen.zheng@neiconn.com",
+       pass: "xethcotnleacuewx"
+   }
+});
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -25,15 +35,23 @@ router.post('/postComments', function (req, res, next){
         res.redirect('/');
       }
     });
+
+      smtpTransport.sendMail({
+        from: "Neiconn <sen.zheng@neiconn.com>", // sender address
+        to: " < " + email + ">", // comma separated list of receivers
+        subject: "registration Confirmation", // Subject line
+        //text: "Hello world ✔",
+        html: "<h3>Welcome to Neiconn Family. Congratulations! You are a member of Neiconn Already!</h3>"// plaintext body
+        }, function(error, response){
+   if(error){
+       console.log(error);
+   }else{
+       console.log("Message sent");
+   }
+});
 });
 
-router.get('/get',function (req, res, next){
-	var db = req.db;
-    var collection = db.get('comments');
-    collection.find({},{},function(e,doc){
-        res.end(JSON.stringify(doc));
-   });
-})
+
 
 function _insertComments (collectionName, req, res){
     var db = req.db;
