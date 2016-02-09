@@ -1,18 +1,20 @@
 body {
 	background-color: #f2f2f2;
 	width:100%;
+	height: 100%;
 }
 
 .content {
 	width: 100%;
-	height:680px;
-	text-align: center;
+    text-align: center;
+    position: relative;
+    height: 85%;
+    margin-top: -20px;
 }
 
 .content h2 {
-	padding-top: 200px;
-
-	color:#737373;
+	padding-top: 180px;
+    color:#737373;
 }
 
 .comments ul li{
@@ -21,16 +23,22 @@ body {
 }
 
 .comments ul li input{
-	width: 300px;
+	height: 35px;
+	width: 302px;
+	border: 1px solid grey;
 }
 
 .content h6 {
 	padding-top: 20px;
 	color:#a6a6a6;
+	margin-bottom: 50px;
+	font-size: 150%;
+	font-weight: 800;
 }
 .footer {
 	width: 100%;
 	text-align: center;
+
 }
 
 .btn1 {
@@ -38,10 +46,10 @@ body {
 	padding: 0 0 0 0;
 	margin: 0 0 0 0; 
 	width: 200px;
-	height: 30px;
+	height: 50px;
 	border: 0px;
 }
 
 .btn1:hover {
-    border: 1px solid grey;
+    border: 2px solid grey;
 };

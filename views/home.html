@@ -8,20 +8,29 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/common.css" type="text/css">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Playball|Open+Sans+Condensed:300,700" />
     <link rel="stylesheet" href="stylesheets/home.css">
     <script src="controller/tempCtrl.js"></script>
+
   </head>
   <body>
+    <div class="container-fluid">
+      <div class="header"><!--header starts-->
+                    <div class="image">
+                      <img src="images/NeiconnLogo.png" />
+                    </div>
+      </div><!--header ends-->  
+    </div>
   	<div class="content" ng-controller="tempCtrl">
        <h2>Welcome To Neiconn Family</h2>
-       <h6>The Official Website Will Come By The End of Feburary</h6>
+       <h6>March 1st</h6>
       
       <!-- Button trigger modal -->
         <button type="button" class="btn1" data-toggle="modal" data-target="#myModal">
-          Write what you expect
+          Enter
         </button>
 
         <!-- Modal -->
@@ -30,7 +39,11 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Leave Your Suggestion</h4>
+                <div class="header"><!--header starts-->
+                    <div class="image">
+                      <img src="images/NeiconnLogo.png" />
+                    </div>
+                </div><!--header ends-->  
               </div>
               <form method="post" class="comments" action="/postComments" >
               <div class="modal-body">
@@ -58,7 +71,7 @@
        
     </div>
     <div class="footer">
-    	<p>Copyright @Neiconn &copy; 2016.</p>
+    	<p>Copyright &copy; 2016.</p>
     </div>
   </body>
 </html>
