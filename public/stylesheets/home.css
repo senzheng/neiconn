@@ -4,6 +4,21 @@ body {
 	height: 100%;
 }
 
+.tempEnter{
+   float: right; 
+  margin-right: 40px;
+  margin-top: 20px;
+}
+
+.tempEnter a{
+	color: white;
+}
+
+.tempEnter a:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .content {
 	width: 100%;
     text-align: center;

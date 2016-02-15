@@ -16,6 +16,21 @@ router.get('/', function(req, res, next) {
   res.render('home');
 });
 
+router.get('/index', function(req, res, next){
+  res.render('index');
+});
+
+router.get('/result', function(req, res, next){
+  res.render('search-result'); 
+});
+
+router.get('/profile', function(req, res, next){
+   res.render('profile');
+});
+
+router.get('/activity',function(req, res, next){
+   res.render('activity');
+});
 
 router.post('/postComments', function (req, res, next){
     var db = req.db;
