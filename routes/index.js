@@ -13,23 +13,52 @@ var smtpTransport = nodemailer.createTransport({
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('home');
+  
+     res.render('home');
 });
 
 router.get('/index', function(req, res, next){
-  res.render('index');
+  if(req.session.email){
+       res.render('index');
+     }
+
+     res.render('/');
 });
 
 router.get('/result', function(req, res, next){
-  res.render('search-result'); 
+  if(req.session.email){
+      res.render('search-result'); 
+   } 
 });
 
 router.get('/profile', function(req, res, next){
-   res.render('profile');
+  if(req.session.email){
+    res.render('profile');
+  }
+   res.render('/');
 });
 
 router.get('/activity',function(req, res, next){
    res.render('activity');
+});
+
+
+router.get('/login/:email/:password', function (req, res, next){
+   var db = req.db;
+   var collection = db.get('user');
+   
+   collection.find({"email" : req.params.email , "password" : req.params.password},{},function (err, data){
+      if(data.length == 1){
+        req.session.email = data[0].email;
+        res.redirect('/index');
+      }else if(data.length != 1){
+        res.send("Please check you username and password");
+      }
+       
+       //console.log(username);
+       //res.end(JSON.stringify(data));
+
+   });
 });
 
 router.post('/postComments', function (req, res, next){

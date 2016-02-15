@@ -1,4 +1,4 @@
-angular.module('tempage')
-       .controller('tempCtrl' , function ($scope, db){
+angular.module('tempage',[])
+       .controller('tempCtrl' , function ($scope){
              
        })

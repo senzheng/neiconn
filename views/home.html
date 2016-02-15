@@ -13,24 +13,55 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Playball|Open+Sans+Condensed:300,700" />
     <link rel="stylesheet" href="stylesheets/home.css">
+    
     <script src="controller/tempCtrl.js"></script>
 
   </head>
-  <body>
+  <body ng-controller = "tempCtrl">
     <div class="container-fluid">
       <div class="header"><!--header starts-->
                     <div class="image">
                       <img src="images/NeiconnLogo.png" />
                     </div>
                     <div class="tempEnter">
-                      <a href="/index">Test Verison</a>
+                     <a type="button" class="btn1" data-toggle="modal" data-target="#myModal1">
+                          Test Entrance
+                      </a>
                     </div>
       </div><!--header ends-->  
     </div>
-  	<div class="content" ng-controller="tempCtrl">
+  	<div class="content" >
        <h2>Welcome To Neiconn Family</h2>
        <h6>March 1st</h6>
       
+
+      <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="header"><!--header starts-->
+                    <div class="image">
+                      <img src="images/NeiconnLogo.png" />
+                    </div>
+                </div><!--header ends-->  
+              </div>
+              
+              <div class="modal-body">
+                <ul>
+                  <li><input type="email" placeholder="123@abc.com" ng-model="email" required></li>
+                  <li><input type="password" ng-model="password" required></li>
+                 </ul> 
+              </div>
+              <div class="modal-footer">
+                <a type="button"  class="btn btn-default" href="login/{{email}}/{{password}}" value="login"/>Login</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+             </form> 
+            </div>
+
+          </div>
+        </div>
       <!-- Button trigger modal -->
         <button type="button" class="btn1" data-toggle="modal" data-target="#myModal">
           Enter

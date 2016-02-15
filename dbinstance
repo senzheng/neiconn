@@ -1,1 +1,4 @@
 db.comments.insert({ "email" : sen.zheng@neiconn.com, "comment" : "welcome"})
+
+db.user.insert({ "email" : sen.zheng@neiconn.com, "password" : "neiconnbest"})
+db.user.insert({ "email" : enwei.wu@neiconn.com, "password" : "neiconnbest"})
