@@ -13,6 +13,8 @@
 			<script src="node_modules/angular.min.js"></script>
 			<!-- Custom Theme files -->
 			<link href="stylesheets/index.css" rel='stylesheet' type='text/css' />
+			<link href="stylesheets/modal.css" rel='stylesheet' type='text/css' />
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 			<!-- Custom Theme files -->
 			<!--icon-->
 
@@ -37,11 +39,88 @@
 				<div class="header">
                     <div id="logo"></div>
                     <ul>
-                    	<li></li>
-                    	<li></li>
-                    	<li></li>
+                    	<li><a type="button" class="btn1" data-toggle="modal" data-target="#signUp">
+                          Sign Up</a></li>
+                    	<li><a type="button" class="btn1" data-toggle="modal" data-target="#login">
+                          Log In</a></li>
                     </ul>
 				</div>
+
+                  <div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			          <div class="modal-dialog" role="document">
+			            <div class="modal-content">
+			              <div class="modal-header">
+			                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			                <div class="header-dialog"><!--header starts-->
+			                    <div class="image">
+			                      neiconn
+			                    </div>
+			                </div><!--header ends-->  
+			              </div>
+			              
+			              <div class="modal-body">
+			                <span>Sign Up with</span>
+                            <div class="social-media">
+                            	<ul>
+                            		<li><i class="fa fa-facebook-square fa-3x"></i></li>
+                            		<li><i class="fa fa-linkedin-square fa-3x"></i></li>
+                            	</ul>
+                            </div>
+                            <span class="font-one">OR</span>
+                            <div class="local-sign">
+                            	<button class="btn-sign">Sign up with Email</button>
+                            	<p>Already have an account? <a> Log In</a></p>
+                            </div>
+
+                            <div class="div-term">
+                            	<p>By signing up, I agree to Neiconn’s <a>Term of Use </a>and <a>Privacy Policy.</a></p>
+                            </div>
+			              </div>
+			             </form> 
+			            </div>
+
+			          </div>
+			        </div>
+			        <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			          <div class="modal-dialog" role="document">
+			            <div class="modal-content">
+			              <div class="modal-header">
+			                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			                <div class="header-dialog"><!--header starts-->
+			                    <div class="image">
+			                      neiconn
+			                    </div>
+			                </div><!--header ends-->  
+			              </div>
+			              
+			              <div class="modal-body">
+			                <span>Log in with</span>
+                            <div class="social-media">
+                            	<ul>
+                            		<li><i class="fa fa-facebook-square fa-3x"></i></li>
+                            		<li><i class="fa fa-linkedin-square fa-3x"></i></li>
+                            	</ul>
+                            </div>
+                            <span class="font-one">OR</span>
+                            <div class="local-login">
+                            	<ul>
+                            		<li><input type="text" placeholder="Email"></li>
+                            		<li><input type="passwprd" placeholder="Password"></li>
+                            	</ul>
+                            	<a>Forgot your password?</a>
+                            </div>
+
+                            <div class="div-btn">
+                            	<button type="button" class="btn-login">Log In</button>
+                            </div>
+			              </div>
+			             </form> 
+			            </div>
+
+			          </div>
+			        </div>
+
+
 				<div class="search-form">
 					<form method="get" action="" name="">
 						<ul>
