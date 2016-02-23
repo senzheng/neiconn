@@ -49,15 +49,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <div class="container" ng-controller="eventListCtrl"> 
 	<div class="content" ><!--content starts-->
 		<div class="title">	<!--title starts-->
-			<span>All | San Fransico |  December 13th, 2016</span>
-			<div class="filter">
+			<span class="col-sm-8 col-xs-6">All | San Fransico |  December 13th, 2016</span>
+			<div class="filter col-sm-3 col-xs-6">
 				<p>Filter</p>
 			</div>
 			<div class="clearfix"></div>
 		</div><!--Title ends-->
-		<div class="col-sm-8"><!--grid start-->
+		<div class="col-md-8"><!--grid start-->
 			<div class="row"><!--the row starts-->
-			   <div class="col-sm-6" ng-repeat="event in data.events | filter:categoryFilterFn | range:selectedPage:pageSize">
+			   <div class="col-sm-6 col-xs-12" ng-repeat="event in data.events | filter:categoryFilterFn | range:selectedPage:pageSize">
                  <div class="thumbnail" ><!--The thumbnail starts-->
 
                     <img src="{{event.img}}" ng-click="redirect()" alt="Uploading Soon">
@@ -92,7 +92,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 		</div><!--grid ends-->
-		<div class="col-sm-4"><!--Map start-->
+		<div id="neiconn_map" class="col-sm-4" ><!--Map start-->
         <div id="map_canvas">
         </div>   
 		</div><!--Map ends-->

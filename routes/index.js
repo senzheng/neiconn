@@ -25,6 +25,9 @@ router.get('/index', function(req, res, next){
      res.render('/');
 });
 
+
+
+
 router.get('/result', function(req, res, next){
   if(req.session.email){
       res.render('search-result'); 
@@ -37,6 +40,10 @@ router.get('/profile', function(req, res, next){
   }
    res.render('/');
 });
+
+router.get('/schedule', function(req, res, next){
+  res.render('myevent');
+})
 
 router.get('/activity',function(req, res, next){
    res.render('activity');

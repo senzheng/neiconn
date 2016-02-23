@@ -3,6 +3,8 @@ html, body {
 	height:100%;
 }
 
+
+
 .head {
    position: relative;
    width:100%;
@@ -374,4 +376,23 @@ ul.footer_social li a i.google{
 }
 ul.footer_social li a i:hover{
 	opacity:0.7;
+}
+
+@media screen and (max-width: 980px){
+	
+       #neiconn_map {
+       	  display: none;
+       }
+
+       .content {
+       	height: 1900px;
+       }
+       
+       .footer {
+       	height: 200px;
+       }
+
+       .footer div{
+       	display: none;
+       }
 }
